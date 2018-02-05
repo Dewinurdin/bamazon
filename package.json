@@ -1,0 +1,25 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "Bamazon, an Amazon-like storefront with the MySQL. The app will take in orders from customers and deplete stock from the store's inventory.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dewinurdin/bamazon.git"
+  },
+  "keywords": [
+    "Bamazon"
+  ],
+  "author": "Dewi Nurdin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dewinurdin/bamazon/issues"
+  },
+  "homepage": "https://github.com/Dewinurdin/bamazon#readme",
+  "dependencies": {
+    "mysql": "^2.15.0"
+  }
+}
