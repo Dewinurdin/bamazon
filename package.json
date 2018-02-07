@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/Dewinurdin/bamazon#readme",
   "dependencies": {
-    "mysql": "^2.15.0"
+    "console-table": "^0.1.2",
+    "inquirer": "^5.1.0",
+    "mysql": "^2.15.0",
+    "table": "^4.0.2"
   }
 }
