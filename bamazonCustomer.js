@@ -63,6 +63,8 @@ var start = function(){
 			console.log("Your grand total is: $",total);
 
 			updateQuantity(res, answer);
+
+			endConnection();
 		})			
 	})		
 };
@@ -70,17 +72,16 @@ var start = function(){
 // parameters
 
 var updateQuantity = function(res, answer) {
-			// answer.quantity
-			// res[0].stock_quantity
+	// answer.quantity
+	// res[0].stock_quantity
 
-			// Substract the user order quantity from Inventory 
-			var remaining = parseInt(res[0].stock_quantity) - parseInt(answer.quantity);
+	// Substract the user order quantity from Inventory 
+	var remaining = parseInt(res[0].stock_quantity) - parseInt(answer.quantity);
 
-			connection.query("UPDATE products SET stock_quantity = ? WHERE title_id = ?", [remaining, answer.id], function(err, quantity){
-				if(err) throw err;
+	connection.query("UPDATE products SET stock_quantity = ? WHERE title_id = ?", [remaining, answer.id], function(err, quantity){
+		if(err) throw err;
 
-				console.log("Database has been updated!");
-				console.log("Current inventory for that product is ", remaining);
-			});			
+		console.log("Database has been updated!");
+		console.log("Current inventory for that product is ", remaining);
+	});			
 };
-
