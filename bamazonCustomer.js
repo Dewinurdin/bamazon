@@ -28,7 +28,7 @@ connection.query("SELECT * FROM products", function(err, res){
 		t.cell('Product Id', res[i].title_id)
 		t.cell('Description', res[i].product_name)
 		t.cell('Department', res[i].department_name)
-		t.cell("Price", res[i].price)
+		t.cell("Price USD", res[i].price)
 		t.cell("Quantity", res[i].stock_quantity)
 		t.newRow()		 
 	}
